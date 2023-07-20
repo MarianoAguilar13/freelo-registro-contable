@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "resolveJsonModule": true
+  },
+  "exclude": ["./client"],
+  "files": ["./server/index.ts"]
+}
