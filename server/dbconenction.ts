@@ -14,10 +14,9 @@ const config = {
 
 const pool = new Pool(config);
 
-/*
 pool.query(
-  "CREATE TABLE clientes (id_cliente SERIAL PRIMARY KEY, nombre VARCHAR(60) NOT NULL, expediente VARCHAR(200) NOT NULL UNIQUE, deudatotal FLOAT NOT NULL, pagoparcial FLOAT NOT NULL);"
-);*/
+  "CREATE TABLE IF NOT EXISTS clientes (id_cliente SERIAL PRIMARY KEY, nombre VARCHAR(60) NOT NULL, expediente VARCHAR(200) NOT NULL UNIQUE, deudatotal DECIMAL(15, 2) NOT NULL, pagoparcial DECIMAL(15, 2) NOT NULL);"
+);
 
 export { pool };
 
